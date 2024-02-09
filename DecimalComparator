@@ -1,0 +1,8 @@
+/*The objective of this coding exercise is to write a small program that determines if two numbers are equal, up to three decimal places.*/
+
+public class DecimalComparator {
+
+    public static boolean areEqualByThreeDecimalPlaces (double x, double y){        
+        return (int) (x * 1000) == (int) (y * 1000);
+    }
+}
