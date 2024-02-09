@@ -1,0 +1,15 @@
+/*The objective of this coding exercise is to write a small program that calculates the sum of the first and last digits of a given number.*/
+
+public class FirstLastDigitSum {
+    // write code here
+    public static int sumFirstAndLastDigit (int number){
+        if (number>=0){
+            int lastDigit = number%10;
+            while (number>9){
+                number=number/10;
+            }
+            return number+lastDigit;
+        }
+        return -1;
+    }
+}
