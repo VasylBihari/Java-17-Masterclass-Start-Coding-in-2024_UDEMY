@@ -1,0 +1,16 @@
+/*The objective of this coding exercise is to write a small program, that given a number of small and large flour bags and a target weight, it can determine if a package can be assembled.*/
+
+public class FlourPacker {
+    public static boolean canPack (int bigCount, int smallCount, int goal){
+        if (bigCount>=0 && smallCount>=0 && goal>=0){
+            for (int i=0;i<=bigCount;i++){
+                for (int j=0;j<=smallCount;j++){
+                    if (5*i+j==goal){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+}
