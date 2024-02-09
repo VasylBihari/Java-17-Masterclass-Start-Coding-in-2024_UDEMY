@@ -1,0 +1,25 @@
+/*The objective of this coding exercise is to write a small program that calculates the sum and average of numbers entered by the user.*/
+
+import java.util.Scanner;
+
+public class InputCalculator {
+    public static void inputThenPrintSumAndAverage (){
+        
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+
+        while (scanner.hasNextInt()) {
+            try {
+                int number = scanner.nextInt();
+                count++;
+                sum += number;
+            } catch (NumberFormatException e){
+                System.out.println();
+            }
+      }
+      double result = (double)(sum)/(double)(count);
+      long avg = Math.round(result);
+        System.out.println("SUM = " + sum + " AVG = " + avg);
+    }
+}
