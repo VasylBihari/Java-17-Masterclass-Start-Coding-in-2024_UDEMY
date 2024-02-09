@@ -1,0 +1,37 @@
+/*The goal of this coding exercise is to write a small program that can calculate the area of a circle and the volume of a cylinder.*/
+
+public class Circle {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius < 0 ? 0 : radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public double getArea (){
+        return radius*radius*Math.PI;
+    }
+}
+
+-----------------------------------------------------
+
+public class Cylinder extends Circle{
+    private double height;
+
+
+    public Cylinder(double radius, double height) {
+        super(radius);
+        this.height = height < 0 ? 0 : height;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getVolume (){
+        return getArea()*getHeight();
+    }
+}
