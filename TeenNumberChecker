@@ -1,0 +1,11 @@
+/*The objective of this coding exercise is to write a small program that checks if a number is a "teen" number, meaning if it's between 13 and 19.*/
+
+public class TeenNumberChecker {
+    public static boolean hasTeen (int a, int b, int c){
+        return (a>=13&&a<=19 || b>=13&&b<=19 || c>=13&&c<=19);
+    }
+    
+    public static boolean isTeen  (int x){
+        return (x>=13&&x<=19);
+    }
+}
