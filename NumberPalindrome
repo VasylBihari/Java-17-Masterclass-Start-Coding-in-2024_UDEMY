@@ -1,0 +1,15 @@
+/*The objective of this coding exercise is to write a small program that checks if a number is a palindrome.*/
+
+public class NumberPalindrome {
+    public static boolean isPalindrome (int number){
+        int reverse=0;
+        int i=number;
+        
+        while (i!=0){
+        int lastDigit=i%10;
+        reverse=reverse*10+lastDigit;
+        i=i/10;
+        }
+        return (number==reverse)?true:false;
+    }
+}
