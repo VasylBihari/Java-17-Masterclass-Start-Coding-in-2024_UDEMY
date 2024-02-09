@@ -1,0 +1,50 @@
+/*The objective of this coding exercise is to write a small program that prints out the number in words.*/
+
+public class NumberToWords {
+    public static void numberToWords(int number) {
+        if (number < 0) {
+            System.out.println("Invalid Value");
+        }
+        int reverseNumber = reverse(number);
+        int digitCount = getDigitCount(number);
+        for (int i = 0; i < digitCount; i++) {
+            number = reverseNumber % 10;
+            String result = switch (number) {
+                case 0 -> "Zero";
+                case 1 -> "One";
+                case 2 -> "Two";
+                case 3 -> "Three";
+                case 4 -> "Four";
+                case 5 -> "Five";
+                case 6 -> "Six";
+                case 7 -> "Seven";
+                case 8 -> "Eight";
+                case 9 -> "Nine";
+                default -> "";
+            };
+            System.out.println(result);
+            reverseNumber /= 10;
+        }
+ 
+    }
+ 
+    public static int reverse(int number) {
+        int result = 0;
+        for (int i = number; i != 0; i /= 10) {
+            result = result * 10 + i % 10;
+        }
+        return result;
+    }
+ 
+    public static int getDigitCount(int number) {
+        if (number < 0) {
+            return -1;
+        }
+        int result = 0;
+        for (int i = number; i != 0; i /= 10) {
+            result++;
+        }
+        if (result == 0) return 1;
+        return result;
+    }
+}
