@@ -1,0 +1,15 @@
+/*The objective of this coding exercise is to write a small program that checks if there's a digit that appears in both numbers.*/
+
+public class SharedDigit {
+    // write code here
+    public static boolean hasSharedDigit (int a, int b){
+    if (a>=10&&a<=99&&b>=10&&b<=99){
+       int lastA =a%10;
+       int firstA = a/10;
+       int lastB = b%10;
+       int firstB = b/10;
+       return (lastA==lastB||lastA==firstB||firstA==lastB||firstA==firstB)?true:false;
+        }
+      return false;
+    }
+}
