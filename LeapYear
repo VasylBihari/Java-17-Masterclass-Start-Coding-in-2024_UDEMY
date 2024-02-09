@@ -1,0 +1,13 @@
+/*The objective of this coding exercise is to write a small program that determines if a particular year is a leap year.*/
+
+public class LeapYear {
+    // write code here
+   public static boolean isLeapYear (int year) {
+        if (year > 1 && year < 9999 && year %4==0 && year%100!=0){
+            return true;
+        } else if (year > 1 && year < 9999 && year %4==0&& year%100==0 && year %400 ==0){
+            return true;
+        }
+        return false;
+    }
+}
