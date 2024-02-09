@@ -1,0 +1,15 @@
+/*The objective of this coding exercise is to write a small program that can determine the largest prime factor of a given number.*/
+
+public class LargestPrime {
+    public static int getLargestPrime(int number) {
+        if(number < 2)  return -1;
+        
+        for (int i = 2; i < number; i++) {
+            if(number % i == 0) {
+                number /= i; // set number as the "matching pair"
+                i--; // negate the i++ increment
+            }
+        }
+        return number; // return prime number
+    }
+}
