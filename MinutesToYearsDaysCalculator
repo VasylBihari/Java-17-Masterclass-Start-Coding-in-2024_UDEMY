@@ -1,0 +1,14 @@
+/*The goal of this coding exercise is to create a program that can determine the equivalent years and days based on a given input in minutes.*/
+
+public class MinutesToYearsDaysCalculator {
+    // write code here
+    
+    public static void printYearsAndDays (long minutes){
+        if (minutes<0){
+           System.out.println("Invalid Value");
+        } else{
+            
+        System.out.println (minutes + " min = " + (minutes/525600) + " y and " + ((minutes%525600)/1440) + " d");
+    }
+    }
+}
