@@ -1,0 +1,16 @@
+/*The objective of this coding exercise is to write a small program that returns the greatest common divisor of two numbers.*/
+
+public class GreatestCommonDivisor {
+    public static int getGreatestCommonDivisor (int first, int second){
+        if (first>=10 && second>=10){
+        for (int i=first;i>0;i--){
+            for (int j=second;j>0;j--){
+                if (first%i==0 && second%j==0 && i==j){
+                    return i;
+                }
+               }
+            }
+        }
+        return -1;
+    }
+}
