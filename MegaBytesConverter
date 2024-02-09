@@ -1,0 +1,16 @@
+/*The objective of this coding exercise is to write a small program that can convert kilobytes to megabytes.*/
+
+
+public class MegaBytesConverter {
+    public static void printMegaBytesAndKiloBytes (int kiloBytes){
+        if (kiloBytes<0){
+            System.out.println ("Invalid Value");
+        }else{
+        
+        int megabytes = kiloBytes/1024;
+        int remainderkiloBytes = kiloBytes%1024;
+        
+        System.out.println (kiloBytes + " KB = " + megabytes + " MB and " + remainderkiloBytes + " KB");
+        }
+    }
+}
