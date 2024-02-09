@@ -1,0 +1,8 @@
+/*The objective of this coding exercise is to write a small program that checks if the sum of two numbers are equal to a third number.*/
+
+public class EqualSumChecker {
+
+    public static boolean hasEqualSum (int x, int y, int z){  
+        return ((x+y==z));
+    } 
+}
