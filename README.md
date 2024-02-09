@@ -1,1 +1,1 @@
-This repository contains my solutions to tasks for writing code in the course "Java 17 Masterclass: Start Coding in 2024"
+This repository contains my solutions to tasks for writing code in the course "Java 17 Masterclass: Start Coding in 2024" on UDEMY https://www.udemy.com/course/java-the-complete-java-developer-course/
