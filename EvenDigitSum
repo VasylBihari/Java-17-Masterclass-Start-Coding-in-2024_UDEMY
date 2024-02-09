@@ -1,0 +1,21 @@
+/*The objective of this coding exercise is to write a small program that calculates the sum of the even digits of a given number.*/
+
+public class EvenDigitSum {
+    // write code here
+    
+    public static int getEvenDigitSum (int number){
+      if (number>=0){
+      int sum =0;
+      int x = number;
+      while (x>0){
+       int digit = x%10;
+      if (digit%2==0){
+     sum+=digit;
+      }
+      x=x/10;
+       }
+       return sum;
+      }
+      return -1;
+   }
+}
