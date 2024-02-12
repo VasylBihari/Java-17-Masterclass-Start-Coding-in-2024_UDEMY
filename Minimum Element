@@ -1,0 +1,30 @@
+/*The objective of this exercise is to design a simple program that prompts the user to enter some numbers, and then displays the minimum number on the screen.*/
+
+import java.util.Scanner;
+
+public class MinimumElement {
+    private static int readInteger(){
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        return size;
+    }
+
+    private static int [] readElements(int size){
+        int []arrays=new int [size];
+        Scanner scanner = new Scanner (System.in);
+        for (int i=0;i<size;i++) {
+            arrays[i] = scanner.nextInt();
+        }
+        return arrays;
+    }
+
+    private static int findMin(int []arrays){
+        int min = arrays[0];
+        for (int i=1;i<arrays.length;i++){
+            if (arrays[i]<min){
+                min=arrays[i];
+            }
+        }
+        return min;
+    }
+}
