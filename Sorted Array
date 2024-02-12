@@ -1,0 +1,42 @@
+/*The objective of this exercise is to store some numbers entered by the user, and then sort them in descending order.*/
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class SortedArray {
+    public static int[]getIntegers (int size){
+        Scanner scanner = new Scanner(System.in);
+        int []arrays = new int[size];
+        for (int i=0;i<size;i++) {
+            arrays[i] = scanner.nextInt();
+        }
+        return arrays;
+    }
+
+    public static int []sortIntegers(int[]arrays){
+        int []copyArray = Arrays.copyOf(arrays,arrays.length);
+        Arrays.sort(copyArray);
+        
+        int left = 0;
+        int right = copyArray.length - 1;
+
+        while (left < right) {
+            int temp = copyArray[left];
+            copyArray[left] = copyArray[right];
+            copyArray[right] = temp;
+
+            left++;
+            right--;
+        }
+            return copyArray;
+    }
+
+    public static void printArray (int[]copyArray){
+        for (int i=0;i<copyArray.length;i++){
+            System.out.println("Element " + i + " contents " + copyArray[i]);
+        }
+    }
+}
+    
+ 
