@@ -1,0 +1,17 @@
+/*The objective of this exercise is to efficiently reverse an array.*/
+
+import java.util.Arrays;
+
+public class ReverseArray {
+
+    private static void reverse(int[]array){
+
+        int []reversed = new int[array.length];
+
+        for (int i=0,j=reversed.length-1;i<array.length;i++,j--){
+            int temp = array[i];
+            reversed[j]=temp;
+        }
+            System.out.print("Array = " + Arrays.toString(array) + "Reversed array = " + Arrays.toString(reversed));
+    }
+}
